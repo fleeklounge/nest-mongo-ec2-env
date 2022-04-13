@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install apache
-yum -y install httpd-2.4.52
+amazon-linux-extras install nginx1
 
 # Set up proxy for Node server
 cat <<EOT >> /etc/httpd/conf/httpd.conf
