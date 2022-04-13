@@ -6,3 +6,7 @@ nvm install node
 node -e "console.log('Running Node.js ' + process.version)"
 npm install rimraf -g
 npm install forever@4.0.0 -g
+
+# -- temporary --
+npm install
+npm run build
