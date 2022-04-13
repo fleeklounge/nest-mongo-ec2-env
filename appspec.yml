@@ -1,0 +1,29 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/nest-mongo-ec2-env
+# - source: /package.json
+#   destination: /home/ec2-user/nest-mongo-ec2-env
+# - source: /public/
+#   destination: /home/ec2-user/nest-mongo-ec2-env/public
+# - source: /node_modules
+#   destination: /home/ec2-user/nest-mongo-ec2-env/node_modules
+# - source: /scripts/requirements.txt
+#   destination: /home/ec2-user/scripts
+hooks:
+  AfterInstall:
+    - location: scripts/install_node
+      timeout: 300
+      runas: root
+    - location: scripts/install_httpd
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: scripts/start_server
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: scripts/stop_server
+      timeout: 300
+      runas: root
