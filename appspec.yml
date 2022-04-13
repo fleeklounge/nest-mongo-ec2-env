@@ -13,9 +13,6 @@ files:
 #   destination: /home/ec2-user/scripts
 hooks:
   AfterInstall:
-    - location: scripts/install_python3
-      timeout: 300
-      runas: root
     - location: scripts/install_node
       timeout: 300
       runas: root
