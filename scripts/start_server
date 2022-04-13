@@ -1,6 +1,5 @@
 #!/bin/bash
 cd /home/ec2-user/nest-mongo-ec2-env
 export NODE_ENV=production
-npm run build
 forever start dist/main.js
-service nginx start!
+service nginx start
