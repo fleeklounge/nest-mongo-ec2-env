@@ -1,0 +1,41 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/nest-mongo-ec2-env
+hooks:
+  ApplicationStop:
+    - location:
+      timeout:
+      runas:
+    - location:
+      timeout:
+      runas:
+  BeforeInstall:
+    - location:
+      timeout:
+      runas:
+    - location:
+      timeout:
+      runas:
+  AfterInstall:
+    - location:
+      timeout:
+      runas:
+    - location:
+      timeout:
+      runas:
+  ApplicationStart:
+    - location:
+      timeout:
+      runas:
+    - location:
+      timeout:
+      runas:
+  ValidateService:
+    - location:
+      timeout:
+      runas:
+    - location:
+      timeout:
+      runas:
