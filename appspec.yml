@@ -13,12 +13,12 @@ files:
 #   destination: /home/ec2-user/scripts
 hooks:
   AfterInstall:
+    - location: scripts/install_nginx
+      timeout: 300
+      runas: root
     - location: scripts/install_node
       timeout: 300
       runas: root
-#    - location: scripts/install_httpd
-#      timeout: 300
-#      runas: root
   ApplicationStart:
     - location: scripts/start_server
       timeout: 300

@@ -5,5 +5,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 nvm install node
 node -e "console.log('Running Node.js ' + process.version)"
 npm install forever@4.0.0 -g
+npm install -g rimraf
 npm install -g @nestjs/cli
 npm run build
