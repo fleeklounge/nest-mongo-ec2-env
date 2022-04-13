@@ -1,0 +1,5 @@
+#!/bin/bash
+cd /home/ec2-user/node-website
+curl --silent --location https://rpm.nodesource.com/setup_12.x | sudo bash -
+yum install -y nodejs-12.18.4-1nodesource
+npm install forever@4.0.0 -g
